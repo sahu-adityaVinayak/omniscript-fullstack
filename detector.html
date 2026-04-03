@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OmniScript | AI Detector</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="tool.css">
+</head>
+<body data-tool="detector">
+	<main class="container">
+		<div class="topbar">
+			<a href="index.html" class="brand"><span class="brand-dot"></span>OmniScript</a>
+			<nav class="nav-links" aria-label="Tool Navigation">
+				<a href="detector.html" class="active">AI Detector</a>
+				<a href="paraphraser.html">Paraphraser</a>
+				<a href="humanizer.html">Humanizer</a>
+				<a href="live-preview.html">Live Preview</a>
+			</nav>
+			<button class="theme-btn" id="themeToggle" type="button">
+				<span id="themeIcon">Dark</span>
+				<span id="themeLabel">Dark</span>
+			</button>
+		</div>
+
+		<header class="tool-header">
+			<h1 class="tool-title">AI Detector</h1>
+			<p class="tool-subtitle">Paste your text below and run a quick AI-likelihood check. This page gives you a blank editor and a dedicated result panel.</p>
+		</header>
+
+		<section class="workspace">
+			<div class="panel">
+				<div class="label">Input Text</div>
+				<textarea id="inputText" placeholder="Paste or write your text here..."></textarea>
+				<div class="actions">
+					<button id="runTool" class="btn btn-primary" type="button">Analyze Text</button>
+					<button id="clearTool" class="btn btn-secondary" type="button">Clear</button>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="label">Result Area</div>
+				<div id="resultText" class="result-box">Result will appear here.</div>
+				<p class="hint">Tip: This is a UI-ready demo result. You can connect your backend API next.</p>
+			</div>
+		</section>
+	</main>
+	<script src="tool.js"></script>
+</body>
+</html>

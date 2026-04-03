@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OmniScript | Live Preview</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="tool.css">
+</head>
+<body data-tool="live-preview">
+	<main class="container">
+		<div class="topbar">
+			<a href="index.html" class="brand"><span class="brand-dot"></span>OmniScript</a>
+			<nav class="nav-links" aria-label="Tool Navigation">
+				<a href="detector.html">AI Detector</a>
+				<a href="paraphraser.html">Paraphraser</a>
+				<a href="humanizer.html">Humanizer</a>
+				<a href="live-preview.html" class="active">Live Preview</a>
+			</nav>
+			<button class="theme-btn" id="themeToggle" type="button">
+				<span id="themeIcon">Dark</span>
+				<span id="themeLabel">Dark</span>
+			</button>
+		</div>
+
+		<header class="tool-header">
+			<h1 class="tool-title">Live Preview</h1>
+			<p class="tool-subtitle">Use this blank editor to preview text stats and output formatting in real time when you run the preview.</p>
+		</header>
+
+		<section class="workspace">
+			<div class="panel">
+				<div class="label">Input Text</div>
+				<textarea id="inputText" placeholder="Type any text here..."></textarea>
+				<div class="actions">
+					<button id="runTool" class="btn btn-primary" type="button">Generate Preview</button>
+					<button id="clearTool" class="btn btn-secondary" type="button">Clear</button>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="label">Result Area</div>
+				<div id="resultText" class="result-box">Result will appear here.</div>
+				<p class="hint">Tip: This page can later host streaming output from your backend.</p>
+			</div>
+		</section>
+	</main>
+	<script src="tool.js"></script>
+</body>
+</html>

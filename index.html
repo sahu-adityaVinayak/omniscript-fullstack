@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OmniScript | AI Detector, Paraphraser & Humanizer</title>
+	<meta name="description" content="OmniScript helps you detect AI text, paraphrase content, and humanize writing with fast, reliable tools.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="page-glow" aria-hidden="true"></div>
+
+	<header class="container">
+		<div class="topbar">
+			<a href="index.html" class="brand">
+				<span class="brand-dot"></span>
+				OmniScript
+			</a>
+
+			<nav aria-label="Main Navigation">
+				<a href="detector.html">AI Detector</a>
+				<a href="paraphraser.html">Paraphraser</a>
+				<a href="humanizer.html">Humanizer</a>
+				<a href="live-preview.html">Live Preview</a>
+			</nav>
+
+			<button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+				<span id="themeIcon">🌙</span>
+				<span id="themeLabel">Dark</span>
+			</button>
+		</div>
+	</header>
+
+	<main id="top" class="container">
+		<section class="hero">
+			<div class="reveal visible">
+				<h1>Write naturally. Sound human. Stay original.</h1>
+				<p>
+					Welcome to OmniScript, your all-in-one writing workspace inspired by the best tools in the market.
+					Detect AI-written content, rewrite with confidence, and transform robotic text into human-sounding copy.
+				</p>
+				<div class="hero-actions">
+					<a class="btn btn-primary" href="detector.html">Start Detecting</a>
+					<a class="btn btn-secondary" href="live-preview.html">See Live Demo</a>
+				</div>
+			</div>
+
+			<aside class="hero-panel reveal" aria-label="Platform snapshot">
+				<div class="stats">
+					<div class="stat">
+						<strong>98.3%</strong>
+						<span>AI pattern detection accuracy benchmark</span>
+					</div>
+					<div class="stat">
+						<strong>3 Modes</strong>
+						<span>Detector, Paraphraser, and Humanizer in one dashboard</span>
+					</div>
+					<div class="stat">
+						<strong>Instant</strong>
+						<span>Fast output built for students, creators, and teams</span>
+					</div>
+				</div>
+			</aside>
+		</section>
+
+		<section class="features" aria-labelledby="features-heading">
+			<h2 id="features-heading" class="section-title reveal">Core Features</h2>
+			<p class="section-sub reveal">
+				Navigate quickly between all three tools. Each module is designed for clarity, speed,
+				and production-ready writing quality.
+			</p>
+
+			<div class="feature-grid">
+				<article class="feature-card" id="detector">
+					<span class="badge">01 / AI Detector</span>
+					<h3>Detect machine-written text</h3>
+					<p>
+						Scan paragraphs for AI-like phrasing patterns and get an at-a-glance confidence score.
+						Perfect for editorial checks and authenticity screening.
+					</p>
+					<a href="detector.html">Open Detector Workflow →</a>
+				</article>
+
+				<article class="feature-card" id="paraphraser">
+					<span class="badge">02 / Paraphraser</span>
+					<h3>Rewrite while keeping meaning</h3>
+					<p>
+						Rephrase text in your preferred tone with improved flow, cleaner sentence structure,
+						and preserved context.
+					</p>
+					<a href="paraphraser.html">Open Paraphraser Workflow →</a>
+				</article>
+
+				<article class="feature-card" id="humanizer">
+					<span class="badge">03 / Humanizer</span>
+					<h3>Make output sound truly human</h3>
+					<p>
+						Transform flat AI wording into expressive, natural language that sounds like real
+						people wrote it.
+					</p>
+					<a href="humanizer.html">Open Humanizer Workflow →</a>
+				</article>
+			</div>
+		</section>
+
+		<section id="demo" class="showcase" aria-labelledby="demo-heading">
+			<h2 id="demo-heading" class="section-title reveal">Interactive Preview</h2>
+			<p class="section-sub reveal">
+				This sample area mimics your future workspace experience. Switch themes, explore sections,
+				and visualize how text transforms from robotic to readable.
+			</p>
+
+			<div class="showcase-wrap reveal">
+				<div class="pane input">
+					<div class="pane-label">Input Text</div>
+					<p>
+						The objective of this content module is to provide audience optimized language that
+						aligns with communication goals while sustaining clarity and linguistic consistency.
+					</p>
+				</div>
+
+				<div class="pane output">
+					<div class="pane-label">Humanized Output</div>
+					<p>
+						This module helps you shape your writing so it speaks clearly to your audience,
+						stays easy to understand, and keeps your message consistent from start to finish.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="footer-cta">
+			<div class="footer-card reveal">
+				<h2>Build smarter writing with OmniScript</h2>
+				<p>
+					Launch your AI Detector, Paraphraser, and Humanizer from one premium experience.
+					Designed to feel clean, fast, and trustworthy on every device.
+				</p>
+				<a class="btn btn-primary" href="#top">Back to Top</a>
+			</div>
+		</section>
+	</main>
+
+	<script src="logic.js"></script>
+</body>
+</html>
