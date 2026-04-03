@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     access_token_expire_minutes: int = 60
     refresh_token_expire_minutes: int = 10080
     cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
+    cors_origin_regex: str = r"https?://(localhost|127\.0\.0\.1)(:\d+)?"
     refresh_cookie_name: str = "omni_refresh_token"
     secure_cookies: bool = False
     otp_expire_minutes: int = 10

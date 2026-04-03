@@ -12,6 +12,19 @@
   --shadow: 0 24px 60px rgba(11, 35, 49, 0.12);
 }
 
+html[data-theme="dark"] {
+  --bg: #07181d;
+  --bg-2: #0f252b;
+  --surface: rgba(14, 36, 44, 0.88);
+  --text: #eff9f8;
+  --muted: #a6c1c6;
+  --line: rgba(185, 222, 229, 0.2);
+  --primary: #28ccb3;
+  --primary-2: #0fb79f;
+  --accent: #ffb06d;
+  --shadow: 0 28px 64px rgba(0, 0, 0, 0.42);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -60,6 +73,12 @@ a {
   position: sticky;
   top: 12px;
   z-index: 15;
+}
+
+.topbar-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .profile-menu {
@@ -224,6 +243,21 @@ a {
   flex-wrap: wrap;
 }
 
+.badge-pill {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  font-weight: 600;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+html[data-theme="dark"] .badge-pill,
+html[data-theme="dark"] .drawer-head {
+  background: rgba(255, 255, 255, 0.03);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -249,6 +283,49 @@ a {
   color: var(--muted);
   margin: 0 0 10px;
   line-height: 1.5;
+}
+
+.section-block {
+  margin-top: 18px;
+  padding: 24px;
+}
+
+.section-block h2 {
+  margin: 0 0 14px;
+  font-family: "Fraunces", serif;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.faq-item h4 {
+  margin: 0 0 6px;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.contact-block p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .btn {
@@ -366,12 +443,18 @@ textarea {
 
 @media (max-width: 900px) {
   .grid,
-  .row {
+  .row,
+  .faq-grid {
     grid-template-columns: 1fr;
   }
 
   .topbar {
     flex-wrap: wrap;
+  }
+
+  .topbar-tools {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .profile-trigger {

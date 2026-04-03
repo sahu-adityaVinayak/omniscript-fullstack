@@ -21,6 +21,7 @@ export function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [displayName, setDisplayName] = useState("My Account");
   const [email, setEmail] = useState("");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -60,6 +61,14 @@ export function TopNav() {
   }, [token]);
 
   useEffect(() => {
+    const storedTheme = localStorage.getItem("omniscript_theme");
+    const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const nextTheme = (storedTheme === "dark" || storedTheme === "light") ? storedTheme : preferred;
+    setTheme(nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
+  }, []);
+
+  useEffect(() => {
     function handleOutsideClick(event: MouseEvent) {
       if (!menuRef.current) {
         return;
@@ -76,6 +85,13 @@ export function TopNav() {
     };
   }, []);
 
+  function toggleTheme() {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    localStorage.setItem("omniscript_theme", nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
+  }
+
   return (
     <div className="topbar card">
       <Link href="/dashboard" className="brand">
@@ -83,7 +99,12 @@ export function TopNav() {
         OmniScript
       </Link>
 
-      <p className="muted" style={{ margin: 0 }}>AI writing workspace</p>
+      <div className="topbar-tools">
+        <p className="muted" style={{ margin: 0 }}>AI writing workspace</p>
+        <button className="btn secondary" type="button" onClick={toggleTheme}>
+          {theme === "dark" ? "Light Mode" : "Dark Mode"}
+        </button>
+      </div>
 
       {token ? (
         <div className="profile-menu" ref={menuRef}>
